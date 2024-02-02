@@ -1,0 +1,255 @@
+/* 0.08g of CO2 en cleaner than 92% of tested web pages*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: minionVariableConcept;
+  src: url(assets/fonts/Minion\ Variable\ Concept.otf);
+}
+@font-face {
+  font-family: whitneyBook;
+  src: url(assets/fonts/whitneybook.otf);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #0F3C37;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+/* navigatie */
+.navbar {
+  font-family: minionVariableConcept;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
+}
+.nav-links a {
+  color: #F5EFED;
+  letter-spacing: 5px;
+  font-size: .8em;
+}
+.nav-links {
+  display: flex;
+  gap: 1em;
+  font-size: 15px;
+}
+.nav-links li {
+  padding: 5px 5px;
+  align-self: center;
+}
+/* logo */
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* background */
+.backimg{
+  position: absolute;
+  z-index: -1;
+  top: 80px;
+}
+/* main */
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* tekst */
+article{
+  color: #F5EFED;
+  letter-spacing: 5px;
+  text-align: center;
+  position: relative;
+  top: 2em;
+}
+.mainText, .extraText{
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: .9em;
+}
+p{
+  font-family: whitneyBook;
+  position: relative;
+  top: 2em;
+  padding-bottom: 1em;
+}
+.extraText{
+  display: none;
+}      
+input[type="checkbox"]{
+  height: 2em;
+  display: block;
+  appearance: none;
+}
+label{
+  position: relative;
+  top: 10px;
+  font-family: minionVariableConcept;
+  cursor: pointer; 
+  border: 2px solid #F5EFED; 
+  border-radius: 25px;
+  background-color: transparent; 
+  height: 15px; 
+  width: 60px; 
+  color: #F5EFED; 
+  font-size: .7em; 
+}
+/* read more/less button */
+label:before{
+  content: "Read More";
+}
+input[type="checkbox"]:checked ~ label:before{
+  content: "Read Less";
+}
+.extraText:has(~input[type="checkbox"]:checked){
+  display: inline;
+}
+/* info button */
+.infoButtonSection{
+  align-content: center;
+}
+.infoButton a{
+  display: flex;
+  text-decoration: none;
+}
+.infoButton{
+  font-family: minionVariableConcept;
+  cursor: pointer; 
+  border: 2px solid #F5EFED; 
+  color: #F5EFED;
+  border-radius: 25px;
+  background-color: transparent; 
+  padding-top: .25em;
+  padding-bottom: .25em;
+  padding-inline: 1.5em;
+  font-size: 1.2em; 
+  position: relative;
+  bottom: -100px;
+  align-items: center;
+}
+.infoButton button:focus{
+  color: #0F3C37;
+  background-color: #F5EFED;
+}
+/* infopagina */
+.infoText h4{
+  font-family: minionVariableConcept;
+  letter-spacing: 5px;
+}
+.infoText p{
+  font-size: .9em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.infoLogo{
+  max-height: 300px;
+}
+.witscherm{
+  display: flex;
+  flex-direction: column;
+  color: #0F3C37;
+  background-color: #F5EFED;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+}
+.witscherm h4{
+  font-family: minionVariableConcept;
+  letter-spacing: 5px;
+  padding: 1em;
+}
+.witscherm h5{
+  font-family: whitneyBook;
+  font-size: large;
+  top: 1em;
+  padding-bottom: 1em;
+  letter-spacing: 5px;
+  text-align: center;
+  position: relative;
+  font-size: .9em;
+}
+#hearthMap{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  align-items: center;
+}
+#hearthMapImg{
+  max-width: 365px;
+  border: solid #0F3C37;
+
+}
+.tijden{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  align-items: center;
+}
+.contact{
+  margin-bottom: 4em;
+}
+
+/* discover page */
+.discoverLogo{
+  width: 180px;
+}
+.discoverMain h4{
+  font-family: minionVariableConcept;
+  letter-spacing: 5px;
+  color: #F5EFED;
+}
+.discoverMain p{
+  color: #F5EFED;
+  font-family: whitneyBook;
+  font-size: .9em;
+  padding-left: 1em;
+  padding-right: 1em;
+  letter-spacing: 5px;
+  text-align: center;
+  position: relative;
+}
+.gallery {
+  margin: 1em;
+  padding-top: 1em;
+}
+.musicPlayer{
+  padding-bottom: 4em;
+}
+
+/* footer */
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #F5EFED;
+  background: rgba(204, 204, 204, 0.5);
+  font-size: .7em;
+  padding-bottom: 1em;
+}
+.infoFooter{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #0F3C37;
+  background: rgba(204, 204, 204, 0.5);
+  font-size: .7em;
+  padding-bottom: 1em;
+}
